@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+img,
+span,
+button {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+/*-------start custom property----------*/
+:root {
+    --tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Font-size-paragraph: 16px;
+    --font-family: 'Roboto', sans-serif;
+    --font-weight-medium: 400;
+    --font-weight-bold: 700;
+}
+
+/*-------end custom property----------*/
+
+html {
+    font-family: var(--font-family);
+}
+#container1 {
+    background: var(--white);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    padding: 2em 1em 1em;
+}
+header h1 {
+    margin-bottom: 0.3em;
+    font-size: 2.3rem;
+    font-weight: var(--font-weight-bold);
+}
+header p {
+    font-weight: var(--font-weight-medium);
+}
+ul {
+    padding: 0em 1em 1em;
+}
+ul li {
+    display: flex;
+    column-gap: 1em;
+    padding-bottom: 0.5em;
+}
+form  {
+    padding: 1em;
+}
+form input {
+    padding: 1em;
+    width: 100%;
+    border-radius: 5px;
+    border-style: solid;
+    color: var(--Grey);
+}
+form #email {
+    margin: 0.5em 0 1em;
+
+}
+form #submit {
+    color: var(--White);
+    background: var(--Dark-Slate-Grey);
+    font-weight: var(--font-weight-bold);
+}
+form #submit:hover {
+    background-image: linear-gradient(to right, hsl(0, 81%, 68%), hsl(5, 50%, 69%));
+}
+article .button:hover {
+    background-image: linear-gradient(to right, hsl(0, 81%, 68%), hsl(5, 50%, 69%));
+}
+span {
+    display: inline;
+    float: right;
+    color: red;
+}
+.errorborder {
+    border-color: var(--tomato);
+    background-color: rgb(249, 185, 174);
+}
+.colr[type=email] {
+    color: red;
+}
+.hide {
+    display: none;
+}
+article {
+    padding: 2rem;
+}
+article img {
+    width: 4em;
+    margin-bottom: 2em;
+}
+article h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+article p {
+    margin-bottom: 18em;
+}
+article .button {
+    width: 100%;
+    background-color: var(--Dark-Slate-Grey);
+    color: white;
+    padding: 1em;
+    border-radius: 10px;
+}
+/*--------for desktop-------*/
+@media only screen and (min-width: 375px) {
+    body {
+        background: var(--Dark-Slate-Grey);
+        padding: 2rem 18rem;
+    }
+    #container1 {
+        align-items: center;
+        width: 60em;
+        background: var(--White);
+        border-radius: 40px;
+        display: flex;
+        flex-direction: row;
+    }
+    #section1 {
+        width: 55%;
+        padding: 0 2em 0 3em;
+
+    }
+    #section2 {
+        width: 45%;
+        padding: 1.5em;
+    }
+    header h1 {
+        font-size: 4rem;
+    }    
+    form input {
+        padding: 1.4em;
+    }
+
+    article {
+        padding-left: 3em;
+        margin: 10% auto;
+        width: 30rem;
+        background: white;
+        border-radius: 2em;
+    }
+    article h1 {
+        font-size: 3rem;
+    }
+    article p {
+        margin-bottom: 2.5em;
+    }
+    article .button {
+        padding: 1.5em 10em;
+    }
+}
